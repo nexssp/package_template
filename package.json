@@ -10,9 +10,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "consolidate": "^0.15.1",
-    "jade": "^1.11.0",
-    "pug": "^2.0.4",
-    "twig": "^1.13.3"
+    "consolidate": "^0.15.1"
   }
 }
