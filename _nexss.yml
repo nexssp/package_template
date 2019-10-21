@@ -1,0 +1,9 @@
+author: Marcin Polak mapoart@gmail.com
+version: 0.1
+name: Template
+files:
+  - name: src/index.js
+
+errors:
+  "cons[ext] is not a function":
+    all: "nexss module 'Template' does not compile this kind of files."
