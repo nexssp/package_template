@@ -3,7 +3,12 @@ version: 0.1
 name: Template
 files:
   - name: src/index.js
-
 errors:
   "cons[ext] is not a function":
-    all: "nexss module 'Template' does not compile this kind of files."
+    all: nexss module 'Template' does not compile this kind of files.
+commands:
+  - name: init
+    command: npm install
+server:
+  host: 127.0.0.1
+  port: 8081

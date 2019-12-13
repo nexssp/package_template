@@ -10,6 +10,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "consolidate": "^0.15.1"
+    "consolidate": "^0.15.1",
+    "mustache": "^3.1.0",
+    "pug": "^2.0.4"
   }
 }

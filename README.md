@@ -7,6 +7,8 @@ Multiple templates for output. Uses consolidate package to handle various templa
 ```sh
 
 echo { "mydata" :1 } | nexss Template --file=views/page.pug
+nexss Template --file="mytemplate.twig"
+nexss Template --server
 
 ```
 
