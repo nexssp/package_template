@@ -1,5 +1,6 @@
 author: Marcin Polak mapoart@gmail.com
 version: 0.1
+debug: 0
 name: Template
 files:
   - name: src/index.js
