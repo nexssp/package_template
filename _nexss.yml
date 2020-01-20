@@ -10,6 +10,3 @@ errors:
 commands:
   - name: init
     command: npm install
-server:
-  host: 127.0.0.1
-  port: 8081
