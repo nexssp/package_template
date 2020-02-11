@@ -10,6 +10,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "consolidate": "^0.15.1"
+    "consolidate": "^0.15.1",
+    "pug": "^2.0.4"
   }
 }
