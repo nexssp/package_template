@@ -1,7 +1,7 @@
 // Nexss PROGRAMMER 2.0.0 - NodeJS
 // Template module
 // STDIN
-process.stdin.on("data", function(NexssStdin) {
+process.stdin.on("data", function (NexssStdin) {
   let NexssStdout,
     cons = require("consolidate");
   try {
@@ -74,7 +74,9 @@ process.stdin.on("data", function(NexssStdin) {
   // --listTemplates - Shows Available templates
   if (NexssStdout.listTemplates || displayTemplates) {
     console.log(
-      `\x1b[1mAvailable Templates \x1b[34m(${templatesPath}):\x1b[0m`
+      `\x1b[1mAvailable Templates \x1b[34m(${path.normalize(
+        templatesPath
+      )}):\x1b[0m`
     );
     items = fs.readdirSync(templatesPath);
     for (var i = 0; i < items.length; i++) {
@@ -88,9 +90,7 @@ process.stdin.on("data", function(NexssStdin) {
     ? `${NexssStdout.cwd}/${NexssStdout.template}`
     : `${process.cwd()}/src/views/page.pug`;
 
-  const ext = require("path")
-    .extname(page)
-    .slice(1);
+  const ext = require("path").extname(page).slice(1);
 
   if (!cons[ext]) {
     console.error(
@@ -113,11 +113,11 @@ You can see template types list by going to this website: https://github.com/tj/
     );
 
     require("child_process").execSync(`npm i ${installPackage}`, {
-      stdio: "inherit"
+      stdio: "inherit",
     });
   }
 
-  cons[ext](page, NexssStdout, function(err, html) {
+  cons[ext](page, NexssStdout, function (err, html) {
     if (err) {
       console.log(err);
     } else {
