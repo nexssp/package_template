@@ -1,6 +1,5 @@
-// Nexss PROGRAMMER 2.0.0 - NodeJS
+// Nexss PROGRAMMER 2.x - NodeJS
 // Template module
-// STDIN
 process.stdin.on("data", function (NexssStdin) {
   let NexssStdout,
     cons = require("consolidate");
@@ -116,10 +115,11 @@ You can see template types list by going to this website: https://github.com/tj/
       stdio: "inherit",
     });
   }
-
+  // When debug it displays errors on the stderr
+  delete NexssStdout.debug;
   cons[ext](page, NexssStdout, function (err, html) {
     if (err) {
-      console.log(err);
+      console.error(err);
     } else {
       console.log(html);
     }
