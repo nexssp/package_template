@@ -132,7 +132,21 @@ try {
 }
 // When debug it displays errors on the stderr
 delete NexssStdout.debug;
-cons[ext](page, NexssStdout, function (err, html) {
+NexssStdout.allowInlineIncludes = true;
+
+let options = NexssStdout;
+if (ext === "pug") {
+  options.filters = {
+    "markdown-it": (x) => {
+      let MarkdownIt = require("markdown-it")();
+      return MarkdownIt.render(x);
+    },
+  };
+}
+// Custom functions
+// options.contentxx = (x) => `------------------------------${x}`;
+
+cons[ext](page, options, function (err, html) {
   if (err) {
     console.error(err);
   } else {
