@@ -136,12 +136,18 @@ NexssStdout.allowInlineIncludes = true;
 
 let options = NexssStdout;
 if (ext === "pug") {
+  // include:markdown-it my.md
   options.filters = {
     "markdown-it": (x) => {
       let MarkdownIt = require("markdown-it")();
       return MarkdownIt.render(x);
     },
   };
+
+  // add functions also
+  // options.func = (myvar1, myvar2) => `${myvar1} lalala ${myvar2}`;
+  // usage:
+  // #{func('tttttttttt')}
 }
 // Custom functions
 // options.contentxx = (x) => `------------------------------${x}`;
