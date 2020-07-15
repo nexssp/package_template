@@ -144,6 +144,19 @@ if (ext === "pug") {
     },
   };
 
+  options.readFile = (filename) => {
+    const { readFileSync, existsSync } = require("fs");
+    if (existsSync(filename)) {
+      return readFileSync(filename);
+    } else {
+      let r = `${filename} does not exist.`;
+      if (!NexssStdout.nxsLive) {
+        r +=
+          "\n(Package Template/ function readFile/ packages/Template/src/index.js)";
+      }
+      return r;
+    }
+  };
   // add functions also
   // options.func = (myvar1, myvar2) => `${myvar1} lalala ${myvar2}`;
   // usage:
