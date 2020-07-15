@@ -157,6 +157,11 @@ if (ext === "pug") {
       return r;
     }
   };
+
+  if (!NexssStdout.nxsLive) {
+    options.pretty = true;
+  }
+
   // add functions also
   // options.func = (myvar1, myvar2) => `${myvar1} lalala ${myvar2}`;
   // usage:
