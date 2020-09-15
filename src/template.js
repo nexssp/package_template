@@ -96,7 +96,9 @@ if (NexssStdout._template) {
 }
 
 if (!path.isAbsolute(page)) {
-  page = `${NexssStdout.cwd}/${page}`;
+  // if (!fs.existsSync(page)) {
+  //   page = `${NexssStdout.cwd}/${page}`;
+  // }
 }
 
 if (!fs.existsSync(page)) {

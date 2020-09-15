@@ -3,7 +3,7 @@ version: 0.1
 debug: 0
 name: Template
 files:
-  - name: src/index.js
+  - name: src/template.js
 errors:
   "cons[ext] is not a function":
     all: nexss module 'Template' does not compile this kind of files.
