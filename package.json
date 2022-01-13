@@ -1,5 +1,5 @@
 {
-  "name": "Template",
+  "name": "nexssp-template",
   "version": "1.0.0",
   "description": "Multiple templates for output",
   "main": "index.js",
@@ -8,11 +8,11 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "consolidate": "^0.16.0",
     "lodash": "^4.17.21",
-    "markdown-it": "^12.2.0",
+    "markdown-it": "^12.3.2",
     "pug": "^3.0.2",
     "twig": "^1.15.4"
   }
